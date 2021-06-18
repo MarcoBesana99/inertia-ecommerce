@@ -39,6 +39,6 @@ class ProductController extends Controller
 
         Product::create($data);
 
-        return Redirect::route('admin.products');
+        return redirect()->back();
     }
 }

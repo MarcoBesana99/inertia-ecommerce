@@ -38805,7 +38805,11 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     function submit() {
-      form.post(route('admin.products.store'));
+      form.post(route("admin.products.store"), {
+        onSuccess: function onSuccess() {
+          form.reset();
+        }
+      });
     }
 
     return {
@@ -42392,7 +42396,7 @@ var _hoisted_3 = {
   "class": "max-w-7xl mx-auto sm:px-6 lg:px-8"
 };
 var _hoisted_4 = {
-  "class": "bg-white overflow-hidden shadow-xl sm:rounded-lg flex justify-center"
+  "class": "\r\n            bg-white\r\n            overflow-hidden\r\n            shadow-xl\r\n            sm:rounded-lg\r\n            flex\r\n            justify-center\r\n          "
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
@@ -42468,8 +42472,8 @@ var _hoisted_16 = {
 
 var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   type: "submit",
-  "class": "mt-3 shadow focus:ring-1 focus:outline-none focus:border-blue-800 border border-blue-800 bg-blue-500 transition duration-500 ease-in-out hover:bg-blue-800 p-2 text-white w-full rounded"
-}, "Submit", -1
+  "class": "\r\n                mt-3\r\n                shadow\r\n                focus:ring-1\r\n                focus:outline-none\r\n                focus:border-blue-800\r\n                border border-blue-800\r\n                bg-blue-500\r\n                transition\r\n                duration-500\r\n                ease-in-out\r\n                hover:bg-blue-800\r\n                p-2\r\n                text-white\r\n                w-full\r\n                rounded\r\n              "
+}, " Submit ", -1
 /* HOISTED */
 );
 
@@ -42487,7 +42491,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, ["prevent"])),
         "class": "flex flex-col p-4 w-full md:w-3/4 lg:w-2/4"
       }, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-        "class": "bg-blue-100 p-2 focus:ring-blue-600 focus-visible:ring-blue-600 border outline-none focus:ring-1 border-blue-600 rounded mt-2",
+        "class": "\r\n                bg-blue-100\r\n                p-2\r\n                focus:ring-blue-600\r\n                focus-visible:ring-blue-600\r\n                border\r\n                outline-none\r\n                focus:ring-1\r\n                border-blue-600\r\n                rounded\r\n                mt-2\r\n              ",
         id: "name",
         "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
           return $setup.form.name = $event;
@@ -42497,7 +42501,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.name]]), $setup.form.errors.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.name), 1
       /* TEXT */
       )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("textarea", {
-        "class": "bg-blue-100 p-2 focus:ring-blue-600 focus-visible:ring-blue-600 border outline-none focus:ring-1 border-blue-600 rounded mt-2",
+        "class": "\r\n                bg-blue-100\r\n                p-2\r\n                focus:ring-blue-600\r\n                focus-visible:ring-blue-600\r\n                border\r\n                outline-none\r\n                focus:ring-1\r\n                border-blue-600\r\n                rounded\r\n                mt-2\r\n              ",
         id: "description",
         "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
           return $setup.form.description = $event;
@@ -42507,7 +42511,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.description]]), $setup.form.errors.description ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.description), 1
       /* TEXT */
       )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-        "class": "bg-blue-100 p-2 focus:ring-blue-600 focus-visible:ring-blue-600 border outline-none focus:ring-1 border-blue-600 rounded mt-2",
+        "class": "\r\n                bg-blue-100\r\n                p-2\r\n                focus:ring-blue-600\r\n                focus-visible:ring-blue-600\r\n                border\r\n                outline-none\r\n                focus:ring-1\r\n                border-blue-600\r\n                rounded\r\n                mt-2\r\n              ",
         id: "category",
         "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
           return $setup.form.category_id = $event;
@@ -42517,7 +42521,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.category_id]]), $setup.form.errors.category_id ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.category_id), 1
       /* TEXT */
       )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-        "class": "bg-blue-100 p-2 focus:ring-blue-600 focus-visible:ring-blue-600 border outline-none focus:ring-1 border-blue-600 rounded mt-2",
+        "class": "\r\n                bg-blue-100\r\n                p-2\r\n                focus:ring-blue-600\r\n                focus-visible:ring-blue-600\r\n                border\r\n                outline-none\r\n                focus:ring-1\r\n                border-blue-600\r\n                rounded\r\n                mt-2\r\n              ",
         id: "price",
         "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
           return $setup.form.price = $event;
@@ -42527,7 +42531,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.price]]), $setup.form.errors.price ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.price), 1
       /* TEXT */
       )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-        "class": "bg-blue-100 p-2 focus:ring-blue-600 focus-visible:ring-blue-600 border outline-none focus:ring-1 border-blue-600 rounded mt-2",
+        "class": "\r\n                bg-blue-100\r\n                p-2\r\n                focus:ring-blue-600\r\n                focus-visible:ring-blue-600\r\n                border\r\n                outline-none\r\n                focus:ring-1\r\n                border-blue-600\r\n                rounded\r\n                mt-2\r\n              ",
         id: "salePrice",
         "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
           return $setup.form.sale_price = $event;
@@ -42537,7 +42541,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.sale_price]]), $setup.form.errors.sale_price ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.sale_price), 1
       /* TEXT */
       )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
-        "class": "bg-blue-100 p-2 focus:ring-blue-600 focus-visible:ring-blue-600 border outline-none focus:ring-1 border-blue-600 rounded mt-2",
+        "class": "\r\n                bg-blue-100\r\n                p-2\r\n                focus:ring-blue-600\r\n                focus-visible:ring-blue-600\r\n                border\r\n                outline-none\r\n                focus:ring-1\r\n                border-blue-600\r\n                rounded\r\n                mt-2\r\n              ",
         id: "quantity",
         "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
           return $setup.form.quantity = $event;
