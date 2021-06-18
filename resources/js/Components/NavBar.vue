@@ -467,27 +467,60 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-              <a
-                href="#"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-              >
-                Pricing
-              </a>
+              <div v-if="canLogin">
+                <inertia-link
+                  v-if="$page.props.user"
+                  href="/dashboard"
+                  class="
+                    whitespace-nowrap
+                    text-base
+                    font-medium
+                    text-gray-500
+                    hover:text-gray-900
+                  "
+                >
+                  Dashboard
+                </inertia-link>
 
-              <a
-                href="#"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-              >
-                Docs
-              </a>
-              <a
-                v-for="item in resources"
-                :key="item.name"
-                :href="item.href"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-              >
-                {{ item.name }}
-              </a>
+                <div v-else>
+                  <inertia-link
+                    :href="route('login')"
+                    class="
+                      whitespace-nowrap
+                      text-base
+                      font-medium
+                      text-gray-500
+                      hover:text-gray-900
+                    "
+                  >
+                    Log in
+                  </inertia-link>
+
+                  <inertia-link
+                    v-if="canRegister"
+                    :href="route('register')"
+                    class="
+                      ml-8
+                      whitespace-nowrap
+                      inline-flex
+                      items-center
+                      justify-center
+                      px-4
+                      py-2
+                      border border-transparent
+                      rounded-md
+                      shadow-sm
+                      text-base
+                      font-medium
+                      text-white
+                      bg-indigo-600
+                      hover:bg-indigo-700
+                    "
+                  >
+                    Register
+                  </inertia-link>
+                </div>
+              </div>
             </div>
             <div>
               <div v-if="canLogin" class="hidden px-6 py-4 sm:block">
@@ -553,7 +586,12 @@
 </template>
 
 <script>
-import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
+import {
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from "@headlessui/vue";
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -566,66 +604,86 @@ import {
   ShieldCheckIcon,
   SupportIcon,
   ViewGridIcon,
+  ShoppingCartIcon,
   XIcon,
-} from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
+} from "@heroicons/vue/outline";
+import { ChevronDownIcon } from "@heroicons/vue/solid";
 const solutions = [
   {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    name: "Analytics",
+    description:
+      "Get a better understanding of where your traffic is coming from.",
+    href: "#",
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    name: "Engagement",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
     icon: CursorClickIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
   {
-    name: 'Integrations',
+    name: "Security",
+    description: "Your customers' data will be safe and secure.",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: "Integrations",
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: "#",
     icon: ViewGridIcon,
   },
   {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
-    href: '#',
+    name: "Automations",
+    description:
+      "Build strategic funnels that will drive your customers to convert",
+    href: "#",
     icon: RefreshIcon,
   },
-]
+];
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+];
 const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+    name: "Help Center",
+    description:
+      "Get all of your questions answered in our forums or contact support.",
+    href: "#",
     icon: SupportIcon,
   },
   {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+    name: "Guides",
+    description:
+      "Learn how to maximize our platform to get the most out of it.",
+    href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+    name: "Events",
+    description:
+      "See what meet-ups and other events we might be planning near you.",
+    href: "#",
     icon: CalendarIcon,
   },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
-]
+  {
+    name: "Security",
+    description: "Understand how we take your privacy seriously.",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+];
 const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+  { id: 1, name: "Boost your conversion rate", href: "#" },
+  {
+    id: 2,
+    name: "How to use search engine optimization to drive traffic to your site",
+    href: "#",
+  },
+  { id: 3, name: "Improve your customer experience", href: "#" },
+];
 export default {
   components: {
     Popover,
@@ -646,7 +704,7 @@ export default {
       callsToAction,
       resources,
       recentPosts,
-    }
+    };
   },
 };
 </script>

@@ -37800,73 +37800,73 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var solutions = [{
-  name: 'Analytics',
-  description: 'Get a better understanding of where your traffic is coming from.',
-  href: '#',
+  name: "Analytics",
+  description: "Get a better understanding of where your traffic is coming from.",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.ChartBarIcon
 }, {
-  name: 'Engagement',
-  description: 'Speak directly to your customers in a more meaningful way.',
-  href: '#',
+  name: "Engagement",
+  description: "Speak directly to your customers in a more meaningful way.",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.CursorClickIcon
 }, {
-  name: 'Security',
+  name: "Security",
   description: "Your customers' data will be safe and secure.",
-  href: '#',
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.ShieldCheckIcon
 }, {
-  name: 'Integrations',
+  name: "Integrations",
   description: "Connect with third-party tools that you're already using.",
-  href: '#',
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.ViewGridIcon
 }, {
-  name: 'Automations',
-  description: 'Build strategic funnels that will drive your customers to convert',
-  href: '#',
+  name: "Automations",
+  description: "Build strategic funnels that will drive your customers to convert",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.RefreshIcon
 }];
 var callsToAction = [{
-  name: 'Watch Demo',
-  href: '#',
+  name: "Watch Demo",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.PlayIcon
 }, {
-  name: 'Contact Sales',
-  href: '#',
+  name: "Contact Sales",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.PhoneIcon
 }];
 var resources = [{
-  name: 'Help Center',
-  description: 'Get all of your questions answered in our forums or contact support.',
-  href: '#',
+  name: "Help Center",
+  description: "Get all of your questions answered in our forums or contact support.",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.SupportIcon
 }, {
-  name: 'Guides',
-  description: 'Learn how to maximize our platform to get the most out of it.',
-  href: '#',
+  name: "Guides",
+  description: "Learn how to maximize our platform to get the most out of it.",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.BookmarkAltIcon
 }, {
-  name: 'Events',
-  description: 'See what meet-ups and other events we might be planning near you.',
-  href: '#',
+  name: "Events",
+  description: "See what meet-ups and other events we might be planning near you.",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.CalendarIcon
 }, {
-  name: 'Security',
-  description: 'Understand how we take your privacy seriously.',
-  href: '#',
+  name: "Security",
+  description: "Understand how we take your privacy seriously.",
+  href: "#",
   icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_1__.ShieldCheckIcon
 }];
 var recentPosts = [{
   id: 1,
-  name: 'Boost your conversion rate',
-  href: '#'
+  name: "Boost your conversion rate",
+  href: "#"
 }, {
   id: 2,
-  name: 'How to use search engine optimization to drive traffic to your site',
-  href: '#'
+  name: "How to use search engine optimization to drive traffic to your site",
+  href: "#"
 }, {
   id: 3,
-  name: 'Improve your customer experience',
-  href: '#'
+  name: "Improve your customer experience",
+  href: "#"
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -38788,14 +38788,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   setup: function setup() {
-    var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.useForm)({
+    var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.useForm)({
       name: null,
       description: null,
       category_id: null,
@@ -39982,35 +39980,34 @@ var _hoisted_41 = {
 var _hoisted_42 = {
   "class": "grid grid-cols-2 gap-y-4 gap-x-8"
 };
+var _hoisted_43 = {
+  key: 0
+};
 
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
-  href: "#",
-  "class": "text-base font-medium text-gray-900 hover:text-gray-700"
-}, " Pricing ", -1
-/* HOISTED */
-);
-
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
-  href: "#",
-  "class": "text-base font-medium text-gray-900 hover:text-gray-700"
-}, " Docs ", -1
-/* HOISTED */
-);
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ");
 
 var _hoisted_45 = {
+  key: 1
+};
+
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Log in ");
+
+var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
+
+var _hoisted_48 = {
   key: 0,
   "class": "hidden px-6 py-4 sm:block"
 };
 
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ");
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ");
 
-var _hoisted_47 = {
+var _hoisted_50 = {
   key: 1
 };
 
-var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Log in ");
+var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Log in ");
 
-var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -40296,33 +40293,23 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
                 , ["href"]);
               }), 128
               /* KEYED_FRAGMENT */
-              ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_42, [_hoisted_43, _hoisted_44, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.resources, function (item) {
-                return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("a", {
-                  key: item.name,
-                  href: item.href,
-                  "class": "text-base font-medium text-gray-900 hover:text-gray-700"
-                }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.name), 9
-                /* TEXT, PROPS */
-                , ["href"]);
-              }), 128
-              /* KEYED_FRAGMENT */
-              ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [$props.canLogin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_45, [_ctx.$page.props.user ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
+              ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_42, [$props.canLogin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_43, [_ctx.$page.props.user ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
                 key: 0,
                 href: "/dashboard",
                 "class": "\r\n                    whitespace-nowrap\r\n                    text-base\r\n                    font-medium\r\n                    text-gray-500\r\n                    hover:text-gray-900\r\n                  "
               }, {
                 "default": _withId(function () {
-                  return [_hoisted_46];
+                  return [_hoisted_44];
                 }),
                 _: 1
                 /* STABLE */
 
-              })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+              })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
                 href: _ctx.route('login'),
                 "class": "\r\n                      whitespace-nowrap\r\n                      text-base\r\n                      font-medium\r\n                      text-gray-500\r\n                      hover:text-gray-900\r\n                    "
               }, {
                 "default": _withId(function () {
-                  return [_hoisted_48];
+                  return [_hoisted_46];
                 }),
                 _: 1
                 /* STABLE */
@@ -40335,7 +40322,43 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
                 "class": "\r\n                      ml-8\r\n                      whitespace-nowrap\r\n                      inline-flex\r\n                      items-center\r\n                      justify-center\r\n                      px-4\r\n                      py-2\r\n                      border border-transparent\r\n                      rounded-md\r\n                      shadow-sm\r\n                      text-base\r\n                      font-medium\r\n                      text-white\r\n                      bg-indigo-600\r\n                      hover:bg-indigo-700\r\n                    "
               }, {
                 "default": _withId(function () {
+                  return [_hoisted_47];
+                }),
+                _: 1
+                /* STABLE */
+
+              }, 8
+              /* PROPS */
+              , ["href"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [$props.canLogin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_48, [_ctx.$page.props.user ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
+                key: 0,
+                href: "/dashboard",
+                "class": "\r\n                    whitespace-nowrap\r\n                    text-base\r\n                    font-medium\r\n                    text-gray-500\r\n                    hover:text-gray-900\r\n                  "
+              }, {
+                "default": _withId(function () {
                   return [_hoisted_49];
+                }),
+                _: 1
+                /* STABLE */
+
+              })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+                href: _ctx.route('login'),
+                "class": "\r\n                      whitespace-nowrap\r\n                      text-base\r\n                      font-medium\r\n                      text-gray-500\r\n                      hover:text-gray-900\r\n                    "
+              }, {
+                "default": _withId(function () {
+                  return [_hoisted_51];
+                }),
+                _: 1
+                /* STABLE */
+
+              }, 8
+              /* PROPS */
+              , ["href"]), $props.canRegister ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
+                key: 0,
+                href: _ctx.route('register'),
+                "class": "\r\n                      ml-8\r\n                      whitespace-nowrap\r\n                      inline-flex\r\n                      items-center\r\n                      justify-center\r\n                      px-4\r\n                      py-2\r\n                      border border-transparent\r\n                      rounded-md\r\n                      shadow-sm\r\n                      text-base\r\n                      font-medium\r\n                      text-white\r\n                      bg-indigo-600\r\n                      hover:bg-indigo-700\r\n                    "
+              }, {
+                "default": _withId(function () {
+                  return [_hoisted_52];
                 }),
                 _: 1
                 /* STABLE */
