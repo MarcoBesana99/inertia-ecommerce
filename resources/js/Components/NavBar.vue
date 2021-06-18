@@ -327,6 +327,30 @@
           </Popover>
         </PopoverGroup>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          <inertia-link href="/" class="relative">
+            <ShoppingCartIcon
+              class="text-indigo-600 hover:text-indigo-700 w-9"
+            ></ShoppingCartIcon>
+            <span
+              class="
+                absolute
+                -top-1
+                right-0
+                bg-red-600
+                rounded-full
+                w-4
+                h-4
+                p-2.5
+                font-bold
+                text-sm
+                flex
+                justify-center
+                items-center
+                text-white
+              "
+              >6</span
+            >
+          </inertia-link>
           <div v-if="canLogin" class="hidden px-6 py-4 sm:block">
             <inertia-link
               v-if="$page.props.user"
@@ -466,64 +490,32 @@
             </div>
           </div>
           <div class="py-6 px-5 space-y-6">
-            <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-              <div v-if="canLogin">
-                <inertia-link
-                  v-if="$page.props.user"
-                  href="/dashboard"
+            <div class="flex justify-center">
+              <inertia-link href="/" class="relative flex items-center justify-center">
+                <ShoppingCartIcon
+                  class="text-indigo-600 hover:text-indigo-700 w-9"
+                ></ShoppingCartIcon>
+                <span
                   class="
-                    whitespace-nowrap
-                    text-base
-                    font-medium
-                    text-gray-500
-                    hover:text-gray-900
+                    absolute
+                    -top-1
+                    right-0
+                    bg-red-600
+                    rounded-full
+                    w-4
+                    h-4
+                    p-2.5
+                    font-bold
+                    text-sm
+                    flex
+                    justify-center
+                    items-center
+                    text-white
                   "
+                  >6</span
                 >
-                  Dashboard
-                </inertia-link>
-
-                <div v-else>
-                  <inertia-link
-                    :href="route('login')"
-                    class="
-                      whitespace-nowrap
-                      text-base
-                      font-medium
-                      text-gray-500
-                      hover:text-gray-900
-                    "
-                  >
-                    Log in
-                  </inertia-link>
-
-                  <inertia-link
-                    v-if="canRegister"
-                    :href="route('register')"
-                    class="
-                      ml-8
-                      whitespace-nowrap
-                      inline-flex
-                      items-center
-                      justify-center
-                      px-4
-                      py-2
-                      border border-transparent
-                      rounded-md
-                      shadow-sm
-                      text-base
-                      font-medium
-                      text-white
-                      bg-indigo-600
-                      hover:bg-indigo-700
-                    "
-                  >
-                    Register
-                  </inertia-link>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div v-if="canLogin" class="hidden px-6 py-4 sm:block">
+              </inertia-link>
+              <div v-if="canLogin" class="px-6 py-4">
                 <inertia-link
                   v-if="$page.props.user"
                   href="/dashboard"
@@ -604,8 +596,8 @@ import {
   ShieldCheckIcon,
   SupportIcon,
   ViewGridIcon,
-  ShoppingCartIcon,
   XIcon,
+  ShoppingCartIcon,
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
 const solutions = [
@@ -693,6 +685,7 @@ export default {
     ChevronDownIcon,
     MenuIcon,
     XIcon,
+    ShoppingCartIcon,
   },
   props: {
     canLogin: Boolean,
