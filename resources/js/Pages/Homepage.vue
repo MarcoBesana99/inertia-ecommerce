@@ -62,7 +62,7 @@
     <div
       class="max-w-7xl mx-auto px-6 lg:px-8 py-6 bg-indigo-300 relative z-20"
     >
-      <h1>Our Products</h1>
+      <h2 class="text-white text-4xl font-semi-bold text-center">Our Products</h2>
       <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mt-5">
         <product v-for="product in products"
           :key="product.id" :product="product" :cart="cart"></product>

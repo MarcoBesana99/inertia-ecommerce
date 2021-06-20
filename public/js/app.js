@@ -44141,7 +44141,9 @@ var _hoisted_7 = {
   "class": "max-w-7xl mx-auto px-6 lg:px-8 py-6 bg-indigo-300 relative z-20"
 };
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", null, "Our Products", -1
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", {
+  "class": "text-white text-4xl font-semi-bold text-center"
+}, "Our Products", -1
 /* HOISTED */
 );
 
