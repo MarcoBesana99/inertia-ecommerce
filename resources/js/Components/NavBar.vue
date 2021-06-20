@@ -691,7 +691,7 @@ export default {
   props: {
     canLogin: Boolean,
     canRegister: Boolean,
-    cart: Array
+    cart: Object
   },
   setup() {
     return {

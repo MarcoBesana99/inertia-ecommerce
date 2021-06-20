@@ -23,7 +23,7 @@ class Cart
         //check if the product is in the cart checking the id
         if (in_array($product['id'], $ids)) {
             //increase product quantity
-            $cart['products'][array_search($product['id'], array_column($cart['products'], 'id'))]['quantity'] += 1;
+            $cart['products'][array_search($product['id'], array_column($cart['products'], 'id'))]['quantity'] ++;
         } else {
             //add the product to the cart
             $product['quantity'] = 1;
@@ -35,10 +35,23 @@ class Cart
 
     public function remove(Product $product): void
     {
+        //get curretn cart
         $cart = $this->get();
-        if (in_array($product, $cart['products'])) {
+        //transform to array product passed as param
+        $product = $product->toArray();
+        //product quantity
+        $quantity = &$cart['products'][array_search($product['id'], array_column($cart['products'], 'id'))]['quantity'];
+        //take all ids of the products in the cart
+        $ids = array_column($cart['products'], 'id');
+        //check if the product is in the cart checking the id
+        if (in_array($product['id'], $ids)) {
+            if ($quantity > 1)
+                //decrease product quantity
+                $quantity --;
+            else
+                //delete product from cart
+                array_splice($cart['products'], array_search($product['id'], array_column($cart['products'], 'id')), 1);
         }
-        array_splice($cart['products'], array_search($product->id, array_column($cart['products'], 'id')), 1);
         $this->set($cart);
     }
 

@@ -28,6 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/products', [ProductController::class, 'index'])->name('admin.products');
         Route::get('/products/create', [ProductController::class, 'create'])->name('admin.products.create');
         Route::post('/products/add', [ProductController::class, 'store'])->name('admin.products.store');
-        Route::post('/cart/add/{product}', [CartController::class, 'addToCart'])->name('cart.add');
+        Route::post('/cart/add/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
+        Route::post('/cart/remove/{productId}', [CartController::class, 'remove'])->name('cart.remove');
         Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 });

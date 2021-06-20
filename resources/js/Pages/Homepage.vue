@@ -64,7 +64,8 @@
     >
       <h1>Our Products</h1>
       <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 mt-5">
-        <product :products="products"></product>
+        <product v-for="product in products"
+          :key="product.id" :product="product" :cart="cart"></product>
       </div>
     </div>
   </base-layout>
