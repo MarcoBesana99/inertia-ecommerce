@@ -8,21 +8,37 @@ class Cart
 {
     public function __construct()
     {
-        if($this->get() === null)
+        if ($this->get() === null)
             $this->set($this->empty());
     }
 
     public function add(Product $product): void
     {
+        //get curretn cart
         $cart = $this->get();
-        array_push($cart['products'], $product);
+        //transform to array product passed as param
+        $product = $product->toArray();
+        //take all ids of the products in the cart
+        $ids = array_column($cart['products'], 'id');
+        //check if the product is in the cart checking the id
+        if (in_array($product['id'], $ids)) {
+            //increase product quantity
+            $cart['products'][array_search($product['id'], array_column($cart['products'], 'id'))]['quantity'] += 1;
+        } else {
+            //add the product to the cart
+            $product['quantity'] = 1;
+            array_push($cart['products'], $product);
+        }
+        //set the updated cart
         $this->set($cart);
     }
 
-    public function remove(int $productId): void
+    public function remove(Product $product): void
     {
         $cart = $this->get();
-        array_splice($cart['products'], array_search($productId, array_column($cart['products'], 'id')), 1);
+        if (in_array($product, $cart['products'])) {
+        }
+        array_splice($cart['products'], array_search($product->id, array_column($cart['products'], 'id')), 1);
         $this->set($cart);
     }
 

@@ -328,7 +328,7 @@
           </Popover>
         </PopoverGroup>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-          <inertia-link href="/" class="relative">
+          <inertia-link :href="route('cart.index')" class="relative">
             <ShoppingCartIcon
               class="text-indigo-600 hover:text-indigo-700 w-9"
             ></ShoppingCartIcon>
@@ -492,7 +492,7 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="flex justify-center">
-              <inertia-link href="/" class="relative flex items-center justify-center">
+              <inertia-link :href="route('cart.index')" class="relative flex items-center justify-center">
                 <ShoppingCartIcon
                   class="text-indigo-600 hover:text-indigo-700 w-9"
                 ></ShoppingCartIcon>
@@ -513,7 +513,7 @@
                     items-center
                     text-white
                   "
-                  >6</span
+                  >{{ cart.products.length }}</span
                 >
               </inertia-link>
               <div v-if="canLogin" class="px-6 py-4">
