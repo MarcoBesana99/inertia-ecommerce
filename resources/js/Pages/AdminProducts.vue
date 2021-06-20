@@ -10,6 +10,7 @@
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
           <inertia-link
+            v-if="isAdmin"
             :href="route('admin.products.create')"
             class="
               inline-flex
@@ -36,8 +37,14 @@
 
 <script>
 import AppLayout from "@/Layouts/AppLayout";
+import { computed } from "Vue";
+import { usePage } from "@Inertiajs/Inertia-vue3";
 
 export default {
+    setup() {
+    const isAdmin = computed(() => usePage().props.value.is_admin);
+    return { isAdmin };
+  },
   components: {
     AppLayout,
   },

@@ -43,6 +43,7 @@ class HandleInertiaRequests extends Middleware
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'authenticated' => auth()->check(),
+            'is_admin' => auth()->check() ? (auth()->user()->is_admin == 1 ? true : false) : false,
             'flash' => [
                 'access_denied' => fn () => $request->session()->get('access_denied')
             ],
