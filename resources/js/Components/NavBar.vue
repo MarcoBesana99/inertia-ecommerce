@@ -349,7 +349,7 @@
                 items-center
                 text-white
               "
-              >6</span
+              >{{ cart.products.length }}</span
             >
           </inertia-link>
           <div v-if="canLogin" class="hidden px-6 py-4 sm:block">
@@ -691,6 +691,7 @@ export default {
   props: {
     canLogin: Boolean,
     canRegister: Boolean,
+    cart: Array
   },
   setup() {
     return {

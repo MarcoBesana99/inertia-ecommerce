@@ -1,6 +1,6 @@
 <template>
   <base-layout>
-    <nav-bar :canLogin="canLogin" :canRegister="canRegister"></nav-bar>
+    <nav-bar :canLogin="canLogin" :canRegister="canRegister" :cart="cart"></nav-bar>
     <div
       class="
         w-full
@@ -81,6 +81,14 @@
             <span>{{ product.sale_price }}</span>
             <span v-if="product.price > 0">{{ product.price }}</span>
           </div>
+          <inertia-link
+            :href="'/cart/add/' + product.id"
+            method="post"
+            as="button"
+            type="button"
+            preserve-scroll
+            >Add</inertia-link
+          >
         </div>
       </div>
     </div>
@@ -100,6 +108,7 @@ export default {
     canLogin: Boolean,
     canRegister: Boolean,
     products: Array,
+    cart: Array,
   },
 };
 </script>

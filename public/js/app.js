@@ -37881,7 +37881,8 @@ var recentPosts = [{
   },
   props: {
     canLogin: Boolean,
-    canRegister: Boolean
+    canRegister: Boolean,
+    cart: Array
   },
   setup: function setup() {
     return {
@@ -39288,7 +39289,8 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     canLogin: Boolean,
     canRegister: Boolean,
-    products: Array
+    products: Array,
+    cart: Array
   }
 });
 
@@ -39934,13 +39936,9 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 var _hoisted_26 = {
   "class": "hidden md:flex items-center justify-end md:flex-1 lg:w-0"
 };
-
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_27 = {
   "class": "\r\n                absolute\r\n                -top-1\r\n                right-0\r\n                bg-red-600\r\n                rounded-full\r\n                w-4\r\n                h-4\r\n                p-2.5\r\n                font-bold\r\n                text-sm\r\n                flex\r\n                justify-center\r\n                items-center\r\n                text-white\r\n              "
-}, "6", -1
-/* HOISTED */
-);
-
+};
 var _hoisted_28 = {
   key: 0,
   "class": "hidden px-6 py-4 sm:block"
@@ -40237,7 +40235,9 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
         "default": _withId(function () {
           return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ShoppingCartIcon, {
             "class": "text-indigo-600 hover:text-indigo-700 w-9"
-          }), _hoisted_27];
+          }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.cart.products.length), 1
+          /* TEXT */
+          )];
         }),
         _: 1
         /* STABLE */
@@ -43614,6 +43614,8 @@ var _hoisted_12 = {
   key: 0
 };
 
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Add");
+
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
@@ -43627,10 +43629,11 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     "default": _withId(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar, {
         canLogin: $props.canLogin,
-        canRegister: $props.canRegister
+        canRegister: $props.canRegister,
+        cart: $props.cart
       }, null, 8
       /* PROPS */
-      , ["canLogin", "canRegister"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+      , ["canLogin", "canRegister", "cart"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
         href: "",
         "class": "\r\n            whitespace-nowrap\r\n            inline-flex\r\n            items-center\r\n            justify-center\r\n            px-4\r\n            py-2\r\n            border border-transparent\r\n            rounded-md\r\n            shadow-sm\r\n            text-base\r\n            font-medium\r\n            text-white\r\n            bg-indigo-600\r\n            hover:bg-indigo-700\r\n            transition-all\r\n            ease-in\r\n            duration-75\r\n            mt-8\r\n          "
       }, {
@@ -43656,7 +43659,22 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
         /* TEXT */
         ), product.price > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("span", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.price), 1
         /* TEXT */
-        )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]);
+        )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+          href: '/cart/add/' + product.id,
+          method: "post",
+          as: "button",
+          type: "button",
+          "preserve-scroll": ""
+        }, {
+          "default": _withId(function () {
+            return [_hoisted_13];
+          }),
+          _: 2
+          /* DYNAMIC */
+
+        }, 1032
+        /* PROPS, DYNAMIC_SLOTS */
+        , ["href"])]);
       }), 128
       /* KEYED_FRAGMENT */
       ))])])];
