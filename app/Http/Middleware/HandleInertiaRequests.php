@@ -42,6 +42,7 @@ class HandleInertiaRequests extends Middleware
             'cart' => CartFacade::get(),
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
+            'authenticated' => auth()->check(),
         ]);
     }
 }
