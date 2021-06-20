@@ -80,7 +80,9 @@ import { usePage } from '@inertiajs/inertia-vue3'
 export default {
   setup() {
       const cart = computed(() => usePage().props.value.cart)
-      return { cart }
+      const canLogin = computed(() => usePage().props.value.canLogin)
+      const canRegister = computed(() => usePage().props.value.canRegister)
+      return { cart, canRegister, canLogin }
     },
   components: {
     BaseLayout,
@@ -88,8 +90,6 @@ export default {
     Product,
   },
   props: {
-    canLogin: Boolean,
-    canRegister: Boolean,
     products: Array,
   },
 };

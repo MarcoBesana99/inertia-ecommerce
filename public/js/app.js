@@ -39311,8 +39311,16 @@ __webpack_require__.r(__webpack_exports__);
     var cart = (0,vue__WEBPACK_IMPORTED_MODULE_3__.computed)(function () {
       return (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.value.cart;
     });
+    var canLogin = (0,vue__WEBPACK_IMPORTED_MODULE_3__.computed)(function () {
+      return (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.value.canLogin;
+    });
+    var canRegister = (0,vue__WEBPACK_IMPORTED_MODULE_3__.computed)(function () {
+      return (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.value.canRegister;
+    });
     return {
-      cart: cart
+      cart: cart,
+      canRegister: canRegister,
+      canLogin: canLogin
     };
   },
   components: {
@@ -39321,8 +39329,6 @@ __webpack_require__.r(__webpack_exports__);
     Product: _Components_Product__WEBPACK_IMPORTED_MODULE_2__.default
   },
   props: {
-    canLogin: Boolean,
-    canRegister: Boolean,
     products: Array
   }
 });
@@ -43719,8 +43725,8 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_base_layout, null, {
     "default": _withId(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_bar, {
-        canLogin: $props.canLogin,
-        canRegister: $props.canRegister,
+        canLogin: $setup.canLogin,
+        canRegister: $setup.canRegister,
         cart: $setup.cart
       }, null, 8
       /* PROPS */
