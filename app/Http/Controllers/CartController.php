@@ -23,4 +23,10 @@ class CartController extends Controller
     CartFacade::remove(Product::where('id',$productId)->first());
     return redirect()->back();
   }
+
+  public function empty()
+  {
+    CartFacade::clear();
+    return redirect()->back();
+  }
 }

@@ -22,7 +22,11 @@
                 <td class="text-center">{{ product.name }}</td>
                 <td class="text-center">
                   <span class="mr-3">{{ product.sale_price }}$</span
-                  ><span class="text-red-600 line-through" v-if="product.price > 0">{{ product.price }}$</span>
+                  ><span
+                    class="text-red-600 line-through"
+                    v-if="product.price > 0"
+                    >{{ product.price }}$</span
+                  >
                 </td>
                 <td class="text-center">
                   <cart-handler :product="product"></cart-handler>
@@ -31,12 +35,19 @@
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="4">
-                  Total: {{ total }}$
-                </td>
+                <td colspan="4">Total: {{ total }}$</td>
               </tr>
             </tfoot>
           </table>
+          <inertia-link
+            :href="route('cart.clear')"
+            method="post"
+            as="button"
+            type="button"
+            preserve-scroll
+            class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded"
+            >Clear cart</inertia-link
+          >
         </div>
       </div>
     </div>
@@ -58,10 +69,13 @@ export default {
     AppLayout,
     CartHandler,
   },
-  computed : {
-    total: function() {
-      return this.cart.products.reduce((sum, product) => sum + product.sale_price * product.quantity, 0 )
-    }
-  }
+  computed: {
+    total: function () {
+      return this.cart.products.reduce(
+        (sum, product) => sum + product.sale_price * product.quantity,
+        0
+      );
+    },
+  },
 };
 </script>

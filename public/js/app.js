@@ -44054,8 +44054,13 @@ var _hoisted_12 = {
 var _hoisted_13 = {
   colspan: "4"
 };
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Clear cart");
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_cart_handler = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("cart-handler");
+
+  var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
 
   var _component_app_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("app-layout");
 
@@ -44082,9 +44087,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         , ["product"])])]);
       }), 128
       /* KEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tfoot", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", _hoisted_13, " Total: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.total) + "$ ", 1
+      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tfoot", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("tr", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", _hoisted_13, "Total: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.total) + "$", 1
       /* TEXT */
-      )])])])])])])];
+      )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+        href: _ctx.route('cart.clear'),
+        method: "post",
+        as: "button",
+        type: "button",
+        "preserve-scroll": "",
+        "class": "px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded"
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_14];
+        }),
+        _: 1
+        /* STABLE */
+
+      }, 8
+      /* PROPS */
+      , ["href"])])])])];
     }),
     _: 1
     /* STABLE */
