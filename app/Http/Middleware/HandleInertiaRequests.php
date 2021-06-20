@@ -43,6 +43,9 @@ class HandleInertiaRequests extends Middleware
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'authenticated' => auth()->check(),
+            'flash' => [
+                'access_denied' => fn () => $request->session()->get('access_denied')
+            ],
         ]);
     }
 }
