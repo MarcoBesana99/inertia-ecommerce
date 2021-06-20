@@ -98,8 +98,14 @@
 <script>
 import BaseLayout from "@/Layouts/BaseLayout";
 import NavBar from "@/Components/NavBar";
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/inertia-vue3'
 
 export default {
+  setup() {
+      const cart = computed(() => usePage().props.value.cart)
+      return { cart }
+    },
   components: {
     BaseLayout,
     NavBar,
@@ -108,7 +114,6 @@ export default {
     canLogin: Boolean,
     canRegister: Boolean,
     products: Array,
-    cart: Array,
   },
 };
 </script>
