@@ -21,7 +21,7 @@
                 <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
-                <td>{{ product.quantity }}</td>
+                <td><cart-handler :product="product"></cart-handler></td>
               </tr>
             </tbody>
           </table>
@@ -33,6 +33,7 @@
 
 <script>
 import AppLayout from "@/Layouts/AppLayout";
+import CartHandler from "@/Components/CartHandler";
 import { computed } from 'vue'
 import { usePage } from '@inertiajs/inertia-vue3'
 
@@ -43,6 +44,7 @@ export default {
   },
   components: {
     AppLayout,
+    CartHandler
   },
 };
 </script>
