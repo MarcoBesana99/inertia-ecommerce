@@ -40,7 +40,9 @@
             </tfoot>
           </table>
           <inertia-link
+          v-if="cart.products.length > 0"
             :href="route('cart.clear')"
+            onclick="return confirm('Are you sure?')"
             method="post"
             as="button"
             type="button"
