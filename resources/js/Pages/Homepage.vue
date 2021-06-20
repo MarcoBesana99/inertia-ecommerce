@@ -75,8 +75,8 @@
 import BaseLayout from "@/Layouts/BaseLayout";
 import NavBar from "@/Components/NavBar";
 import Product from "@/Components/Product";
-import { computed } from 'vue'
-import { usePage } from '@inertiajs/inertia-vue3'
+import { computed } from 'Vue'
+import { usePage } from '@Inertiajs/Inertia-vue3'
 
 export default {
   setup() {

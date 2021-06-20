@@ -1,9 +1,9 @@
 require('./bootstrap');
 
 // Import modules...
-import { createApp, h } from 'vue';
-import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue3';
-import { InertiaProgress } from '@inertiajs/progress';
+import { createApp, h } from 'Vue';
+import { App as InertiaApp, plugin as InertiaPlugin } from '@Inertiajs/Inertia-vue3';
+import { InertiaProgress } from '@Inertiajs/Progress';
 
 const el = document.getElementById('app');
 

@@ -209,7 +209,7 @@
 
 <script>
 import AppLayout from "@/Layouts/AppLayout";
-import { useForm } from "@inertiajs/inertia-vue3";
+import { useForm } from "@Inertiajs/Inertia-vue3";
 
 export default {
   setup() {

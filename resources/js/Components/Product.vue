@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-300 shadow-xl rounded">
+  <div class="bg-gray-300 shadow-xl rounded product">
     <div>
       <img
         class="w-full"
@@ -9,15 +9,15 @@
     </div>
     <div class="p-5">
       <h2 class="font-bold text-lg">{{ product.name }}</h2>
-      <span>{{ product.sale_price }}</span>
-      <span v-if="product.price > 0">{{ product.price }}</span>
+      <span class="mr-2">{{ product.sale_price }}$</span>
+      <span v-if="product.price > 0" class="text-red-600 line-through">{{ product.price }}$</span>
     </div>
     <cart-handler :product="product"></cart-handler>
   </div>
 </template>
 
 <script>
-import CartHandler from '@/components/CartHandler'
+import CartHandler from '@/Components/CartHandler'
 export default {
   components : {
     CartHandler
@@ -27,3 +27,11 @@ export default {
   }
 };
 </script>
+<style scoped>
+.product .cart-handler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+</style>

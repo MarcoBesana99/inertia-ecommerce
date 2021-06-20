@@ -7,7 +7,7 @@
     <div class="py-12">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-          <table class="table-auto">
+          <table class="table-auto w-full m-5">
             <thead>
               <tr>
                 <th>ID</th>
@@ -18,12 +18,24 @@
             </thead>
             <tbody>
               <tr v-for="(product, index) in cart.products" :key="index">
-                <td>{{ product.id }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
-                <td><cart-handler :product="product"></cart-handler></td>
+                <td class="text-center">{{ product.id }}</td>
+                <td class="text-center">{{ product.name }}</td>
+                <td class="text-center">
+                  <span class="mr-3">{{ product.sale_price }}$</span
+                  ><span class="text-red-600 line-through" v-if="product.price > 0">{{ product.price }}$</span>
+                </td>
+                <td class="text-center">
+                  <cart-handler :product="product"></cart-handler>
+                </td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">
+                  Total: {{ total }}$
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>
@@ -34,8 +46,8 @@
 <script>
 import AppLayout from "@/Layouts/AppLayout";
 import CartHandler from "@/Components/CartHandler";
-import { computed } from 'vue'
-import { usePage } from '@inertiajs/inertia-vue3'
+import { computed } from "Vue";
+import { usePage } from "@Inertiajs/Inertia-vue3";
 
 export default {
   setup() {
@@ -44,7 +56,12 @@ export default {
   },
   components: {
     AppLayout,
-    CartHandler
+    CartHandler,
   },
+  computed : {
+    total: function() {
+      return this.cart.products.reduce((sum, product) => sum + product.sale_price * product.quantity, 0 )
+    }
+  }
 };
 </script>

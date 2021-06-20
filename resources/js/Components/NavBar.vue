@@ -584,7 +584,7 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-} from "@headlessui/vue";
+} from "@Headlessui/Vue";
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -599,8 +599,8 @@ import {
   ViewGridIcon,
   XIcon,
   ShoppingCartIcon,
-} from "@heroicons/vue/outline";
-import { ChevronDownIcon } from "@heroicons/vue/solid";
+} from "@Heroicons/Vue/Outline";
+import { ChevronDownIcon } from "@Heroicons/Vue/Solid";
 const solutions = [
   {
     name: "Analytics",
