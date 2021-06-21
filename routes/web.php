@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
@@ -34,4 +35,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/cart/remove/{productId}', [CartController::class, 'remove'])->name('cart.remove');
         Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
         Route::post('/cart/clear', [CartController::class, 'empty'])->name('cart.clear');
+        Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+        Route::post('/checkout/purchase/{total}', [CheckoutController::class, 'purchase'])->name('checkout.purchase');
 });

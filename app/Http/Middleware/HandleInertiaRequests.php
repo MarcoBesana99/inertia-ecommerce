@@ -45,8 +45,11 @@ class HandleInertiaRequests extends Middleware
             'authenticated' => auth()->check(),
             'is_admin' => auth()->check() ? (auth()->user()->is_admin == 1 ? true : false) : false,
             'flash' => [
-                'access_denied' => fn () => $request->session()->get('access_denied')
+                'access_denied' => fn () => $request->session()->get('access_denied'),
+                'error' => fn () => $request->session()->get('error'),
+                'message' => fn () => $request->session()->get('message'),
             ],
+            'stripeKey' => env('STRIPE_KEY')
         ]);
     }
 }
