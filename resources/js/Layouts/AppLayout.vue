@@ -24,6 +24,7 @@
                   Dashboard
                 </jet-nav-link>
                 <jet-nav-link
+                  v-if="is_admin"
                   :href="route('admin.products')"
                   :active="route().current('admin.products')"
                 >
@@ -197,6 +198,7 @@
               Dashboard
             </jet-responsive-nav-link>
             <jet-nav-link
+              v-if="is_admin"
               :href="route('admin.products')"
               :active="route().current('admin.products')"
             >
@@ -283,8 +285,15 @@ import JetDropdown from "@/Jetstream/Dropdown";
 import JetDropdownLink from "@/Jetstream/DropdownLink";
 import JetNavLink from "@/Jetstream/NavLink";
 import JetResponsiveNavLink from "@/Jetstream/ResponsiveNavLink";
+import { usePage } from "@Inertiajs/Inertia-vue3";
+import { computed } from "Vue";
 
 export default {
+  setup() {
+    const is_admin = computed(() => usePage().props.value.is_admin);
+
+    return { is_admin };
+  },
   components: {
     JetApplicationMark,
     JetBanner,

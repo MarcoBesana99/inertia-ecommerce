@@ -38818,6 +38818,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/DropdownLink */ "./resources/js/Jetstream/DropdownLink.vue");
 /* harmony import */ var _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/NavLink */ "./resources/js/Jetstream/NavLink.vue");
 /* harmony import */ var _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/ResponsiveNavLink */ "./resources/js/Jetstream/ResponsiveNavLink.vue");
+/* harmony import */ var _Inertiajs_Inertia_vue3__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @Inertiajs/Inertia-vue3 */ "./node_modules/@Inertiajs/Inertia-vue3/dist/index.js");
+/* harmony import */ var Vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! Vue */ "./node_modules/Vue/dist/vue.runtime.esm-bundler.js");
+
+
 
 
 
@@ -38825,6 +38829,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  setup: function setup() {
+    var is_admin = (0,Vue__WEBPACK_IMPORTED_MODULE_7__.computed)(function () {
+      return (0,_Inertiajs_Inertia_vue3__WEBPACK_IMPORTED_MODULE_6__.usePage)().props.value.is_admin;
+    });
+    return {
+      is_admin: is_admin
+    };
+  },
   components: {
     JetApplicationMark: _Jetstream_ApplicationMark__WEBPACK_IMPORTED_MODULE_0__.default,
     JetBanner: _Jetstream_Banner__WEBPACK_IMPORTED_MODULE_1__.default,
@@ -42278,7 +42290,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_nav_link, {
+  , ["href", "active"]), $setup.is_admin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_jet_nav_link, {
+    key: 0,
     href: _ctx.route('admin.products'),
     active: _ctx.route().current('admin.products')
   }, {
@@ -42290,7 +42303,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_nav_link, {
+  , ["href", "active"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_nav_link, {
     href: _ctx.route('cart.index'),
     active: _ctx.route().current('cart.index')
   }, {
@@ -42405,7 +42418,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_nav_link, {
+  , ["href", "active"]), $setup.is_admin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_jet_nav_link, {
+    key: 0,
     href: _ctx.route('admin.products'),
     active: _ctx.route().current('admin.products')
   }, {
@@ -42417,7 +42431,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_nav_link, {
+  , ["href", "active"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_nav_link, {
     href: _ctx.route('cart.index'),
     active: _ctx.route().current('cart.index')
   }, {
