@@ -29,6 +29,27 @@
           >
             Add a product
           </inertia-link>
+
+          <table class="table w-full">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Product sale price</th>
+            <th>Product full price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="product in products.data" :key="product.id">
+            <td>{{ product.id }}</td> 
+            <td>{{ product.name }}</td>
+            <td>{{ product.sale_price }}</td>
+            <td>{{ product.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+          <pagination class="mt-6" :links="products.links" />
         </div>
       </div>
     </div>
@@ -39,6 +60,7 @@
 import AppLayout from "@/Layouts/AppLayout";
 import { computed } from "Vue";
 import { usePage } from "@Inertiajs/Inertia-vue3";
+import Pagination from '@/Components/Pagination'
 
 export default {
     setup() {
@@ -47,6 +69,10 @@ export default {
   },
   components: {
     AppLayout,
+    Pagination
   },
+  props: {
+    products : Object
+  }
 };
 </script>

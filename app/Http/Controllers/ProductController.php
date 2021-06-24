@@ -12,7 +12,13 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return inertia('AdminProducts');
+        $products = Product::orderBy('id', 'desc')->paginate(6);
+        return inertia(
+            'AdminProducts', 
+            [
+                'products' => $products
+            ]
+        );
     }
 
     public function create()
