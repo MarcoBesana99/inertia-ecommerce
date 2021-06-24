@@ -29,6 +29,12 @@
                 >
                   Products
                 </jet-nav-link>
+                <jet-nav-link
+                  :href="route('cart.index')"
+                  :active="route().current('cart.index')"
+                >
+                  Cart
+                </jet-nav-link>
               </div>
             </div>
 
@@ -195,6 +201,12 @@
               :active="route().current('admin.products')"
             >
               Products
+            </jet-nav-link>
+            <jet-nav-link
+              :href="route('cart.index')"
+              :active="route().current('cart.index')"
+            >
+              Cart
             </jet-nav-link>
           </div>
 
